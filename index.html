@@ -1,52 +1,37 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by TEMPLATED
-http://templated.co
-Released for free under the Creative Commons Attribution License
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
-Name       : Adequately 
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20130910
-
--->
-<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="index.css" rel="stylesheet" type="text/css" media="all" />
-<!--<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
-<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Tiny Circleslider: A lightweight cross browser circular carousel.</title>
+	<link rel="stylesheet" href="tinycircleslider.css" type="text/css" media="screen"/>
 
-<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
-
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!-- build:js jquery.tinycircleslider.js -->
+	<script type="text/javascript" src="../../lib/jquery.tinycircleslider.js"></script>
+    <!-- /build -->
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$('#rotatescroll').tinycircleslider({ interval: true, dotsSnap: true, dotsHide: false });
+		});
+	</script>
 </head>
 <body>
-	<div>
-	<div class="first"> 
-		
+	<div id="rotatescroll">
+		<div class="viewport">
+			<ul class="overview">
+				<li><a href="http://www.baijs.com"><img src="images/hdr3.jpg" /></a></li>
+				<li><a href="http://www.baijs.com"><img src="images/hdr2.jpg" /></a></li>
+				<li><a href="http://www.baijs.com"><img src="images/hdr1.jpg" /></a></li>
+				<li><a href="http://www.baijs.com"><img src="images/hdr4.jpg" /></a></li>
+				<li><a href="http://www.baijs.com"><img src="images/hdr5.jpg" /></a></li>
+			</ul>
+		</div>
 
-		<!--彈出視窗--><a href="javascript:void(0)"
-		onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
-		<!--彈出視窗end-->
-		<!--mailbox-->
-		
-		<img src="img/mailbox.jpg" height="160px" alt="" class="" /></a>
-		<!--house-->
-		<img src="img/house1.jpg" height="500px"  alt="" class="" />
-		<!--
-		<p>示例彈出層：<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">請點這裡</a></p> -->
-        <div id="light" class="white_content">這是一個層視窗示例程式. 
-			<!--<embed src="https://d.pr/free/a/JxYUpa/my.mp3" hidden="true" autostart="true" loop="true">-->
-				<h1> The best love is the kind that awakens the soul </h1>
-		<a href = "javascript:void(0)" 
-		onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">
-		<div class="close" ><img src="img/close.png" height="20px" alt="" class="" style="float:right"/></div></a></div> 
-		
-		<div id="fade" class="black_overlay"></div> 
-	 </div>
+		<div class="dot"></div>
+		<div class="overlay"></div>
+		<div class="thumb"></div>
 	</div>
 </body>
 </html>
